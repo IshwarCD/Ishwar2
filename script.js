@@ -1,13 +1,17 @@
+const title = document.querySelector('title')
 const days = document.querySelector('.day');
 const hours = document.querySelector('.hour');
 const minutes = document.querySelector('.minute');
 const seconds = document.querySelector('.second');
 const nextYear = document.querySelector('.next-year')
+const nextYear2 = document.querySelector('.h')
 
 const currentYear = new Date().getFullYear();
 const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
 
+title.innerText = `${currentYear + 1} Countdown`
 nextYear.innerText = currentYear + 1
+nextYear2.innerText = currentYear + 1
 
 function updateCountdown() {
   const currentTime = new Date();
